@@ -86,7 +86,7 @@ $(document).ready(function () {
         var possibles = data.possibles;
         for (var i = 0; i < possibles.length; i++) {
             var possible = possibles[i];
-            qString = qString + " <input type='radio' name='" + data.id + "' value= " + i + " > " + possible + "<br>";
+            qString = qString + "<input type='radio' name='" + data.id + "' value= " + i + " > " + possible + "<br>";
         }
         return qString + "</form>";
     }
