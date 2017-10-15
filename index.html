@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>TrivialTrivia</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Added a link to Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+        crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="row">
+            <div class="jumbotron">
+                <h1 class="text-center">Movie Trivia Game!</h1>
+                <hr>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <!-- this button is created to start the game -->
+                            <button class='startGame'>Click Me to Play!</button>
+                            <!-- a wrapper div holds all the items that will be displayed after the startGame button is clicked -->
+                            <div class='wrapper'>
+                                <!-- div to hold countdown timer -->
+                                <div class='timer' id='timeLeft'></div>
+
+                                <br>
+                                <!-- button to end game if player finishes the game before the time is up -->
+                                <button id='doneButton'>Done</button>
+                                <br>
+                                <h2>
+                                    <div class='message' id='messageDiv'></div>
+                                </h2>
+                                <!-- div to display the results of the game -->
+                                <h2>
+                                    <div class='results'></div>
+                                </h2>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <!-- <iframe width="420" height="315" src="http://bladerunnermovie.com/post/160446972878"></iframe> -->
+                            <!-- <video width="420" height="315" src="https://www.youtube.com/watch?v=dZOaI_Fn5o4"></video> -->
+                            <div style="position:relative;height:0;padding-bottom:35.82%"><iframe src="https://www.youtube.com/embed/haXvp8M9Cog?autoplay=1" style="position:absolute;width:100%;height:100%;left:0" width="1005" height="360" frameborder="0" allowfullscreen></iframe></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+                    <div class="form-group">
+                        <!-- div to hold all the questions -->
+                        <h3>
+                            <div class='form' id='questions-container'></div>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- linking to jquery and the local js file -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <script type='text/javascript' src='assets/javascript/game.js'></script>
+</body>
+
+</html>
