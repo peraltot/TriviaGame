@@ -20,6 +20,16 @@ $(document).ready(function () {
             possibles: ['Jeff Goldblum', 'Richard Attenborough', 'Micheal Keaton', 'Sam Neill'],
             id: 'question-three',
             answer: 0
+        }, {
+            question: '"Bruce Willis" and "Brad Pitt: star in what 1995 Terry Gillam science fictiorn film?',
+            possibles: ['Time Bandits', '12 Monkeys', 'Jupiter Ascending', 'The Zero Theorem'],
+            id: 'question-four',
+            answer: 1
+        }, {
+            question: '"Jane Fonda" travels 41st-century space with her blind guardian angel "Pygar" in what 1968 science film?',
+            possibles: ['Thunderbird 6', 'Countdown', 'Voyage to the Prehistoric Women', 'Barbarella'],
+            id: 'question-five',
+            answer: 3
         }]
     }
 
