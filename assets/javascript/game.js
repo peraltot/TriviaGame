@@ -70,6 +70,41 @@ $(document).ready(function () {
             possibles: ['Men in Black', 'Jurassic Park', 'The Matrix', 'Predators'],
             id: 'question-thirteen',
             answer: 2
+        }, {
+            question: '"Kevin Spacey" and "Sam Rockwell" co-star in which 2009 British science fiction film?',
+            possibles: ['Gravity', 'Europa Report', 'Mission to Mars', 'Moon'],
+            id: 'question-fourteen',
+            answer: 3
+        }, {
+            question: '"The Terminator" was the first film in which Arnold Schwarzenegger said what catchphrase?',
+            possibles: ['Hasta La Vista, Baby', 'Youre Terminated', 'Chill Out, Dickwad', 'Ill be back'],
+            id: 'question-fifteen',
+            answer: 0
+        }, {
+            question: 'Genetically perfect DNA is the subject of which science fiction film?',
+            possibles: ['The Final Cut', 'Equilibrium', 'Gattaca', 'THX 1138'],
+            id: 'question-sixteen',
+            answer: 2
+        }, {
+            question: 'What were the bad guys led by Deacon in the film "Waterworld"?',
+            possibles: ['Riffs', 'Stokers', 'Smokers', 'Fins'],
+            id: 'question-seventeen',
+            answer: 2
+        }, {
+            question: 'How many of the six Star Wars films did George Lucas direct?',
+            possibles: ['Five', 'Two', 'Four', 'Six'],
+            id: 'question-eighteen',
+            answer: 2
+        }, {
+            question: 'Who played the role of the game show host Damon Killian in Stephen Kings film "The Running Man"?',
+            possibles: ['Dweezil Zappa', 'Richard Dawson', 'Mick Fleetwood', 'Jesse Ventura'],
+            id: 'question-nineteen',
+            answer: 1
+        }, {
+            question: 'What film from the Mad Max series stars "Mel Gibson" and "Tina Turner"?',
+            possibles: ['Mad Max - Beyond Thunderdome', 'Mad Max', 'Mad Max - Fury Road', 'Mad Max - The Road Warrior'],
+            id: 'question-twenty',
+            answer: 0
         }
     ]
     }
@@ -93,7 +128,7 @@ $(document).ready(function () {
     });
 
     // These events start the timer: set the number of seconds the guesser has 
-    var number = 60;
+    var number = 120;
     $('#timeLeft').on('click', ".startGame", run);
 
     // This function enables the number of seconds to decrease with time, and to display
