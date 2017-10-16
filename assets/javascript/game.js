@@ -115,6 +115,7 @@ $(document).ready(function () {
         $(this).hide();
         buildQuestions();
         run();
+        $('#movie_video').html('<video width="420" height="315"  controls autoplay><source src="assets/images/BLADE RUNNER - Official Trailer.mp4" type="video/mp4"></video>');
 
         // create a function with an onclick event for the doneButton that both checks the Answers 
         // and stops the clock when "done" button is pressed
@@ -128,7 +129,7 @@ $(document).ready(function () {
     });
 
     // These events start the timer: set the number of seconds the guesser has 
-    var number = 120;
+    var number = 141;
     $('#timeLeft').on('click', ".startGame", run);
 
     // This function enables the number of seconds to decrease with time, and to display
