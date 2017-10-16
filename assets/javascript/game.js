@@ -30,7 +30,23 @@ $(document).ready(function () {
             possibles: ['Thunderbird 6', 'Countdown', 'Voyage to the Prehistoric Women', 'Barbarella'],
             id: 'question-five',
             answer: 3
-        }]
+        }, {
+            question: 'Select the correct subtitle to the 1984 film "Star Trek III"?',
+            possibles: ['The Voyage Home', 'The Final Frontier', 'Wrath of Khan', 'The Search for Spock'],
+            id: 'question-six',
+            answer: 3
+        }, {
+            question: 'What is the name of Malcolm McDowells character in the 1971 film "A Clockwork Orange"?',
+            possibles: ['Daniel DeLarge', 'Thomas DeLarge', 'Alex Delarge', 'Steven DeLarge'],
+            id: 'question-seven',
+            answer: 2
+        }, {
+            question: 'Released in 2006, which of the following films is an adaptation of the P.D. James novel?',
+            possibles: ['Altered', 'Children of Men', 'The Host', 'The Prestige'],
+            id: 'question-eight',
+            answer: 1
+        }
+    ]
     }
 
     // This initializes the button that starts the game 
