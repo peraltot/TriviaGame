@@ -45,6 +45,31 @@ $(document).ready(function () {
             possibles: ['Altered', 'Children of Men', 'The Host', 'The Prestige'],
             id: 'question-eight',
             answer: 1
+        }, {
+            question: 'Who directed the 2009 epic science fiction film "Avatar"?',
+            possibles: ['Steven Spielberg', 'James Cameron', 'Ridley Scott', 'George Lucas'],
+            id: 'question-nine',
+            answer: 1
+        }, {
+            question: 'With which classic science fiction film would you associate the quote "Game over, man Game Over!"?',
+            possibles: ['Close Encounters of the Third Kind', 'The Thing', 'Predator', 'Alien'],
+            id: 'question-ten',
+            answer: 3
+        }, {
+            question: 'What year saw the release of the science fiction comedy film "Men in Black"?',
+            possibles: ['1993', '1999', '1995', '1997'],
+            id: 'question-eleven',
+            answer: 3
+        }, {
+            question: 'What is the name of the character that Tom Cruise plays in the 2014 film "Edge of Tomorrow"?',
+            possibles: ['Kimmel', 'Skinner', 'Cage', 'Farrell'],
+            id: 'question-twelve',
+            answer: 2
+        }, {
+            question: 'The Wachowski Brothers became well-known for which science fiction films series?',
+            possibles: ['Men in Black', 'Jurassic Park', 'The Matrix', 'Predators'],
+            id: 'question-thirteen',
+            answer: 2
         }
     ]
     }
@@ -77,7 +102,7 @@ $(document).ready(function () {
         number--;
         $('#timeLeft').html('<h2>' + number + " seconds" + '</h2>');
         if (number === 0) {
-            $("#messageDiv").html("Time UP " + " Game Over!");
+            $("#messageDiv").html("Times UP " + " Game Over!");
             stop();
             checkAnswers();
         }
