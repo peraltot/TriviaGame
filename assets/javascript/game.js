@@ -154,6 +154,7 @@ $(document).ready(function () {
     function stop() {
         // Clears our "counter" interval. The interval name is passed to the clearInterval function.
         clearInterval(counter);
+        $('#movie_video').html('<video width="420" height="315"  controls autoplay><source src="assets/images/Terminator-2---Hasta-La-Vista-Baby.mp4" type="video/mp4"></video>');
     }
 
     // this function takes the template created in the Template function, allows it to be displayed on the page
