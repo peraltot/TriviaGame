@@ -181,7 +181,6 @@ $(document).ready(function () {
 
     // function to tabulate the guesser results
     function checkAnswers() {
-        var resultsHTML = '';
         var correct = 0;
         var incorrect = 0;
 
