@@ -108,10 +108,9 @@ $(document).ready(function () {
         }
     ]
     }
-
+    $('#movie_video').html('<h2>'+"Pick your answers, anything left blank or wrong will be incorrect!"+'</h2>');
     // This initializes the button that starts the game 
-    $(".startGame").on("click", function () {
-        $('.wrapper').show();
+    $("#startGame").on("click", function () {
         $(this).hide();
         buildQuestions();
         run();
@@ -173,8 +172,8 @@ $(document).ready(function () {
         var qString = "<br><strong><form id='questionOne'>" + data.question + "</strong><br>";
         var possibles = data.possibles;
         for (var i = 0; i < possibles.length; i++) {
-            var possible = possibles[i];
-            qString = qString + "<input type='radio' name='" + data.id + "' value= " + i + " > " + possible + "<br>";
+            var possiblelist = possibles[i];
+            qString = qString + "<input type='radio' name='" + data.id + "' value= " + i + " > " + possiblelist + "<br>";
         }
         return qString + "</form>";
     }
@@ -195,9 +194,9 @@ $(document).ready(function () {
         $('.results').html('Correct: ' + correct + "<br>" + 'Incorrect: ' + incorrect + "<br>");
     }
 
-    function isCorrect(question) {
-        var answers = $('[name=' + question.id + ']');
-        var correct = answers.eq(question.answer);
+    function isCorrect(Checkquestion) {
+        var answers = $('[name=' + Checkquestion.id + ']');
+        var correct = answers.eq(Checkquestion.answer);
         var isChecked = correct.is(':checked');
         return isChecked;
     }
