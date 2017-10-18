@@ -107,10 +107,11 @@ $(document).ready(function () {
             answer: 0
         }]
     }
-
     
-    $('#movie_video').html('<h2>' + "Pick your answers, anything left blank or wrong will be incorrect!" + '</h2>');
+    $('#movie_video').html('<h2>' + "Pick your answers, anything left blank or wrong will be counted as incorrect!" + '</h2>');
+
     // This initializes the button that starts the game 
+
     $("#startGame").on("click", function () {
         $(this).hide();
         buildQuestions();
@@ -136,7 +137,7 @@ $(document).ready(function () {
     // the result of that decrease until time is up. 
     function decrement() {
         number--;
-        $('#timeLeft').html('<h2>' + number + " seconds" + '</h2>');
+        $('#timeLeft').html('<h2>'+ "Time Remaining: " + number + " seconds" + '</h2>');
         if (number === 0) {
             $("#messageDiv").html("Times UP " + " Game Over!");
             stop();
@@ -164,7 +165,6 @@ $(document).ready(function () {
             questionBOX = questionBOX + formTemplate(game.questions[i]);
         }
         $('#questions-container').html(questionBOX);
-
     }
 
     // this function dynamically creates the inputs needed for the form 
