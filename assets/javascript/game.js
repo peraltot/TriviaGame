@@ -105,10 +105,11 @@ $(document).ready(function () {
             possibles: ['Mad Max - Beyond Thunderdome', 'Mad Max', 'Mad Max - Fury Road', 'Mad Max - The Road Warrior'],
             id: 'question-twenty',
             answer: 0
-        }
-    ]
+        }]
     }
-    $('#movie_video').html('<h2>'+"Pick your answers, anything left blank or wrong will be incorrect!"+'</h2>');
+
+    
+    $('#movie_video').html('<h2>' + "Pick your answers, anything left blank or wrong will be incorrect!" + '</h2>');
     // This initializes the button that starts the game 
     $("#startGame").on("click", function () {
         $(this).hide();
