@@ -107,16 +107,27 @@ $(document).ready(function () {
             answer: 0
         }]
     }
-    
-    $('#movie_video').html('<h2>' + "Pick your answers, anything left blank or wrong will be counted as incorrect!" + '</h2>');
 
-    // This initializes the button that starts the game 
 
-    $("#startGame").on("click", function () {
-        $(this).hide();
-        buildQuestions();
-        run();
-        $('#movie_video').html('<video width="420" height="315"  controls autoplay><source src="assets/images/BLADE RUNNER - Official Trailer.mp4" type="video/mp4"></video>');
+    startgame();
+
+    $('#tryagain').on('click', function () {
+        startgame()
+    });
+
+    function startgame() {
+
+
+        $('#movie_video').html('<h2>' + "Pick your answers, anything left blank or wrong will be counted as incorrect!" + '</h2>');
+
+        // This initializes the button that starts the game 
+
+        $("#startGame").on("click", function () {
+            $(this).hide();
+            buildQuestions();
+            run();
+            $('#movie_video').html('<video width="420" height="315"  controls autoplay><source src="assets/images/BLADE RUNNER - Official Trailer.mp4" type="video/mp4"></video>');
+        })
 
         // create a function with an onclick event for the doneButton that both checks the Answers 
         // and stops the clock when "done" button is pressed
@@ -127,29 +138,29 @@ $(document).ready(function () {
             $("#messageDiv").html("Game Over!");
         })
 
-    });
+        // These events start the timer: set the number of seconds the guesser has 
+        var number = 141;
 
-    // These events start the timer: set the number of seconds the guesser has 
-    var number = 141;
-    $('#timeLeft').on('click', ".startGame", run);
+        // the run function sets the spacing of the decrement function's time interval so that
+        // it can be equal to a second per number decrement.
+        function run() {
+            counter = clearInterval();
+            counter = setInterval(decrement, 1000);
+        }
 
-    // This function enables the number of seconds to decrease with time, and to display
-    // the result of that decrease until time is up. 
-    function decrement() {
-        number--;
-        $('#timeLeft').html('<h2>'+ "Time Remaining: " + number + " seconds" + '</h2>');
-        if (number === 0) {
-            $("#messageDiv").html("Times UP " + " Game Over!");
-            stop();
-            checkAnswers();
+        // This function enables the number of seconds to decrease with time, and to display
+        // the result of that decrease until time is up. 
+        function decrement() {
+            number--;
+            $('#timeLeft').html('<h2>' + "Time Remaining: " + number + " seconds" + '</h2>');
+            if (number === 0) {
+                $("#messageDiv").html("Times UP " + " Game Over!");
+                stop();
+                checkAnswers();
+            }
         }
     }
 
-    // the run function sets the spacing of the decrement function's time interval so that
-    // it can be equal to a second per number decrement.
-    function run() {
-        counter = setInterval(decrement, 1000);
-    }
 
     // The stop function
     function stop() {
