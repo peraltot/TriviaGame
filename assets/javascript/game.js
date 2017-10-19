@@ -1,5 +1,7 @@
 // initialize the .js document with this. It contains all of the code for the .js file:
-
+$('#tryagain').on('click', function () {
+    location.reload();
+});
 
 $(document).ready(function () {
 
@@ -110,10 +112,6 @@ $(document).ready(function () {
 
 
     startgame();
-
-    $('#tryagain').on('click', function () {
-        startgame()
-    });
 
     function startgame() {
 
