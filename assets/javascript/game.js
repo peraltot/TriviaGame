@@ -183,7 +183,8 @@ $(document).ready(function () {
         var possibles = data.possibles;
         for (var i = 0; i < possibles.length; i++) {
             var possiblelist = possibles[i];
-            qString = qString + "<input type='radio' name='" + data.id + "' value= " + i + " > " + possiblelist + "<br>";
+            qString = qString + "<input type='radio' name='" + data.id + "' value= " + i + " >" + possiblelist + "<br>";
+            // qString = qString + "<input type='radio' name='" + data.id + "' value= " + i + " style=height:35px; width:35px; vertical-align: middle; > " + possiblelist + "<br>";
         }
         return qString + "</form>";
     }

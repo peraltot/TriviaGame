@@ -1,8 +1,9 @@
-/* .wrapper { */
-	/* display: none; */
-/* } */
-
 body {
 	background-image: url("../images/background.png");
 }
 
+    input[type=radio] {
+    border: 0px;
+    width: 5%;
+    height: 0.9em;
+}
